@@ -61,7 +61,7 @@
             <a href="{% url 'home' %}" class="brand-logo center black-text">Castle Vapes</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a class="black-text" href="">Shop</a></li>
+                <li><a class="black-text" href="{% url 'products' %}">Shop</a></li>
                 <li><a class="black-text" href="">About Us</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-trigger black-text" data-target="dropdown1">Login<i
@@ -75,7 +75,7 @@
     </nav>
     <!-- Mobile sidebar -->
     <ul class="sidenav black-text" id="mobile-demo">
-        <li><a class="black-text" href="">Shop</a></li>
+        <li><a class="black-text" href="{% url 'products' %}">Shop</a></li>
         <li><a class="black-text" href="">About Us</a></li>
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
