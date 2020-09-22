@@ -3,13 +3,69 @@
     "pk": 1,
     "model": "products.product",
     "fields": {
-      "sku": "",
+      "sku": "100001",
       "name": "Asmodus Kodama",
-      "description": "",
+      "description": "The new Boost Kodama is polished stabilized wood, giving it an extraordinary classic feel!\n\nYou will fall in love with all the colors in this unique mod. ",
       "price": 249.99,
       "category": 1,
       "rating": 5,
-      "image_url": "",
+      "image_url": "https://asmodusasia.com/wp-content/uploads/2019/08/gunmetalblue-1_large_4164ff01-4289-4ba4-9d06-21a58ab6411c.jpg",
+      "image": ""
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "100002",
+      "name": "Asmodus Minikin",
+      "description": "Minikin 2 Kodama edition is back in stock with a great update! The Minikin 2 Kodama is now powered by a GX-180-UTC, a chipset that packs a punch, has battery saving capabilities and also has a customize-able colored screen.",
+      "price": 199.99,
+      "category": 1,
+      "rating": 4.5,
+      "image_url": "https://cdn.shopify.com/s/files/1/0241/2241/products/box-mod-asmodus-minikin-v2-180w-touch-screen-11.gif?v=1579274026",
+      "image": ""
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "100003",
+      "name": "VooPoo Drag v2",
+      "description": "Powered by dual 18650 batteries, it can reach up to 177W power. As a new generation, the Voopoo Drag 2 177W Kit is lighter and more functional. The Voopoo Drag 2 Mod Adopts the GENE.FIT chip, which is secured by a V0 class fire retardant bridge to block dust, liquid or burning. FIT is a mode that can protect tanks to the fullest with their smart combinations of FIT 1/2/3.",
+      "price": 49.99,
+      "category": 2,
+      "rating": 4.7,
+      "image_url": "https://www.vaporfi.com.au/media/catalog/product/cache/34/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/v/o/voopoo-drag-2-together.jpg",
+      "image": ""
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "100004",
+      "name": "ELeaf Pico",
+      "description": " The iStick Pico, just like its name, is preferable, innovative, compact and outstanding (PICO). Powered by single interchangeable 18650 cell, it provides you with 75W maximum output and switchable VW/Bypass/TC-Ni/TC-Ti/TC-SS/TCR modes.",
+      "price": 29.99,
+      "category": 2,
+      "rating": 3.9,
+      "image_url": "https://gloimg.gbtcdn.com/images/pdm-product-pic/Electronic/2016/03/23/source-img/20160323093820_67085.jpg_500x500.jpg",
+      "image": ""
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "100005",
+      "name": "Boxer",
+      "description": "The classic.A high-end addition to the trending squonk box mod segment, the Boxer Mod Classic DNA 75C BF Squonk 2X700 features a 3D Printed regulated box mod design with the option of utilizing a single 20700 or 21700 battery platform.",
+      "price": 149.99,
+      "category": 3,
+      "rating": 5,
+      "image_url": "https://i.pinimg.com/originals/18/40/60/18406013e1327f41a8f8c53c5edb4adc.jpg",
       "image": ""
     }
   }
