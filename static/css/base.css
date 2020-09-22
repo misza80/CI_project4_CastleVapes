@@ -12,10 +12,11 @@ main {
     font-family: 'Great Vibes', cursive;
 }
 
-.cart{
+.cart {
     margin-right: 14px;
     margin-top: 0px;
 }
+
 /* from Bulma */
 .icon {
     align-items: center;
