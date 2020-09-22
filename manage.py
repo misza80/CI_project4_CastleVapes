@@ -5,6 +5,7 @@ import sys
 import os
 import sys
 
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CastleVapes.settings')

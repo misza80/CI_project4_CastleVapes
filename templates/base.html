@@ -2,18 +2,21 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
 
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -26,22 +29,53 @@
     {% endblock %}
 
     <title>Castle Vapes {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header></header>
+</head>
+<body>
+<header>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown" class="dropdown-content">
+        <li><a class="black-text" href="">Login</a></li>
+        <li><a class="black-text" href="">Register</a></li>
+    </ul>
+    <nav class="white">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo black-text">Castle Vapes</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="black-text" href="">Shop</a></li>
+                <li><a class="black-text" href="">About Us</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger black-text" data-target="dropdown">Login<i
+                        class="material-icons right black-text">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Mobile sidebar -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="">Home</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Mods</a></li>
+    </ul>
+</header>
 
-    {% if messages %}
-    {% endif %}
+{% if messages %}
+{% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+{% block page_header %}
+{% endblock %}
 
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+{% block postloadjs %}
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Main JavaScript file -->
+    <script href="{% static 'js/script.js' %}"></script>
+{% endblock %}
 
-    
-  </body>
+
+</body>
 </html>
