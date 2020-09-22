@@ -1,3 +1,26 @@
-h1 {
-    color: green;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.brand-logo {
+    font-family: 'Great Vibes', cursive;
+}
+
+.cart{
+    margin-right: 14px;
+    margin-top: 0px;
+}
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }

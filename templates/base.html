@@ -14,6 +14,7 @@
     {% endblock %}
 
     {% block corecss %}
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -23,6 +24,7 @@
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/e00e7c8f1c.js" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -34,28 +36,59 @@
 <header>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a class="black-text" href="">Login</a></li>
-        <li><a class="black-text" href="">Register</a></li>
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <li><a href="" class="black-text">Product Management</a></li>
+            {% endif %}
+            <li><a href="" class="black-text">My Profile</a></li>
+            <li><a href="{% url 'account_logout' %}" class="black-text">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'account_signup' %}" class="black-text">Register</a></li>
+            <li><a href="{% url 'account_login' %}" class="black-text">Login</a></li>
+        {% endif %}
     </ul>
     <nav class="white">
         <div class="nav-wrapper">
-            <a href="" class="brand-logo black-text">Castle Vapes</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <p class="right cart"><a
+                    class="{% if grand_total %}text-info font-weight-bold{% else %}black-text{% endif %}"
+                    href=""><i class="fas fa-shopping-cart fa-lg black-text"></i>
+                {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                {% else %}
+                    $0.00
+                {% endif %}
+            </a></p>
+            <a href="{% url 'home' %}" class="brand-logo center black-text">Castle Vapes</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a class="black-text" href="">Shop</a></li>
                 <li><a class="black-text" href="">About Us</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-trigger black-text" data-target="dropdown1">Login<i
                         class="material-icons right black-text">arrow_drop_down</i></a></li>
+
             </ul>
+
         </div>
+
+
     </nav>
     <!-- Mobile sidebar -->
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="">Home</a></li>
-        <li><a href="">Login</a></li>
-        <li><a href="">Mods</a></li>
+    <ul class="sidenav black-text" id="mobile-demo">
+        <li><a class="black-text" href="">Shop</a></li>
+        <li><a class="black-text" href="">About Us</a></li>
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <li><a href="" class="black-text">Product Management</a></li>
+            {% endif %}
+            <li><a href="" class="black-text">My Profile</a></li>
+            <li><a href="{% url 'account_logout' %}" class="black-text">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'account_login' %}" class="black-text">Login</a></li>
+            <li><a href="{% url 'account_signup' %}" class="black-text">Register</a></li>
+        {% endif %}
     </ul>
+
 </header>
 
 {% if messages %}
