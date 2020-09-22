@@ -7,30 +7,32 @@
         <div class="row">
             {% for product in products %}
                 <div class="col s12 m6 l6 xl4">
-                <div class="card">
+                    <div class="card">
                     {% if product.image %}
                         <div class="card-image">
-                            <a href="{% url 'product_detail' product.id %}"><img src="{{ product.image.url }}"
-                                                                                 alt=" {{ product.name }}"></a>
+                                <a href="{% url 'product_detail' product.id %}"><img src="{{ product.image.url }}"
+                                                                                     alt=" {{ product.name }}"></a>
+                                </div>
+                            {% else %}
+                                <div class="card-image">
+                                    <a href="{% url 'product_detail' product.id %}"><img
+                                            src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ product.name }}"></a>
+                                </div>
+                            {% endif %}
+                        <div class="card-content">
+                            <h6> {{ product.name }}</h6>
+                            <p class="grey-text">${{ product.price }}</p>
+                            {% if product.rating %}
+                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                    5</small>
+                            {% else %}
+                                <small class="text-muted">No Rating</small>
+                            {% endif %}
                         </div>
-                    {% else %}
-                        <div class="card-image">
-                            <a href="{% url 'product_detail' product.id %}"><img src="{{ MEDIA_URL }}noimage.png"
-                                                                                 alt="{{ product.name }}"></a>
-                        </div>
-                    {% endif %}
-                    <div class="card-content">
-                        <h6> {{ product.name }}</h6>
-                        <p class="grey-text">${{ product.price }}</p>
-                        {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                        {% else %}
-                            <small class="text-muted">No Rating</small>
-                        {% endif %}
                     </div>
                 </div>
             {% endfor %}
-            </div>
         </div>
     </div>
 {% endblock %}
