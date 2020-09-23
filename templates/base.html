@@ -64,7 +64,7 @@
                 <li>
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-field">
-                            <input id="search" type="search" required>
+                            <input id="search" type="search" name="q" required>
                             <label class="label-icon" for="search"><i
                                     class="black-text material-icons">search</i></label>
                             <i class="material-icons">close</i>
@@ -96,7 +96,7 @@
         <li>
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-field">
-                    <input id="search" type="search" required>
+                    <input id="search" type="text" name="q" placeholder="Search our site">
                     <label class="label-icon" for="search"><i
                             class="black-text material-icons">search</i></label>
                     <i class="material-icons">close</i>
