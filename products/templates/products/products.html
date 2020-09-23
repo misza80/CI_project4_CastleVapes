@@ -5,10 +5,9 @@
     <h2>Products</h2>
     <div class="container col s12 m10 offset-m1 grey-text text-darken-2 content-container ">
         <div class="row">
-            <div class="col s12">
+            <div class="col s5 m3">
                 <!-- Dropdown Trigger -->
                 <a class='dropdown-trigger btn grey lighten-1' href='#' data-target='dropdown2'>Categories</a>
-
                 <!-- Dropdown Structure -->
                 <ul id='dropdown2' class='dropdown-content'>
                     <li><a href="{% url 'products' %}?category=woodresin">Wood and resin mods</a></li>
@@ -19,19 +18,40 @@
                     <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
                     <li><a href="{% url 'products' %}">Show All</a></li>
                 </ul>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn grey lighten-1' href='#' data-target='dropdown3'>Sort by..</a>
-
-                <!-- Dropdown Structure -->
-                <ul id='dropdown3' class='dropdown-content'>
-                    <li><a href="#!">Price(Low-High)</a></li>
-                    <li><a href="#!">Price(High-Low)</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">Name(A-Z)</a></li>
-                    <li><a href="#!">Name(Z-A)</a></li>
-                </ul>
+            </div>
+            <div class="col s2 m6"></div>
+            <div class="col s5 m3">
+                <select id="sort-selector"
+                        class="browser-default {% if current_sorting != 'None_None' %}info{% else %}{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                    </option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                        to high)
+                    </option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                        (high to low)
+                    </option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                        (low to high)
+                    </option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                        (high to low)
+                    </option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                    </option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                        (Z-A)
+                    </option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                        Category (A-Z)
+                    </option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                        Category (Z-A)
+                    </option>
+                </select>
             </div>
         </div>
+
         <div class="row">
             {% for product in products %}
                 <div class="col s12 m6 l6 xl4">
