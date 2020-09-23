@@ -5,21 +5,49 @@
     <h2>Products</h2>
     <div class="container col s12 m10 offset-m1 grey-text text-darken-2 content-container ">
         <div class="row">
+            <div class="col s12">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger btn grey lighten-1' href='#' data-target='dropdown2'>Categories</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown2' class='dropdown-content'>
+                    <li><a href="{% url 'products' %}?category=woodresin">Wood and resin mods</a></li>
+                    <li><a href="{% url 'products' %}?category=metal">Metal mods</a></li>
+                    <li><a href="{% url 'products' %}?category=plastic">Plastic mods</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="{% url 'products' %}?category=deals">Special Offers</a></li>
+                    <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
+                    <li><a href="{% url 'products' %}">Show All</a></li>
+                </ul>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger btn grey lighten-1' href='#' data-target='dropdown3'>Sort by..</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown3' class='dropdown-content'>
+                    <li><a href="#!">Price(Low-High)</a></li>
+                    <li><a href="#!">Price(High-Low)</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">Name(A-Z)</a></li>
+                    <li><a href="#!">Name(Z-A)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
             {% for product in products %}
                 <div class="col s12 m6 l6 xl4">
                     <div class="card">
-                    {% if product.image %}
-                        <div class="card-image">
+                        {% if product.image %}
+                            <div class="card-image">
                                 <a href="{% url 'product_detail' product.id %}"><img src="{{ product.image.url }}"
                                                                                      alt=" {{ product.name }}"></a>
-                                </div>
-                            {% else %}
-                                <div class="card-image">
-                                    <a href="{% url 'product_detail' product.id %}"><img
-                                            src="{{ MEDIA_URL }}noimage.png"
-                                            alt="{{ product.name }}"></a>
-                                </div>
-                            {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="card-image">
+                                <a href="{% url 'product_detail' product.id %}"><img
+                                        src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }}"></a>
+                            </div>
+                        {% endif %}
                         <div class="card-content">
                             <h6> {{ product.name }}</h6>
                             <p class="grey-text">${{ product.price }}</p>
