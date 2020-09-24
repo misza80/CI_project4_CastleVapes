@@ -24,7 +24,13 @@
     {% endblock %}
 
     {% block corejs %}
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/e00e7c8f1c.js" crossorigin="anonymous"></script>
+        <!-- Materialize - Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Main JavaScript file -->
+        <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -49,7 +55,7 @@
     </ul>
     <nav class="white nav-extended z-depth-0">
         <div class="nav-wrapper">
-            <p class="right cart"><a
+            <p class="right cart black-text"><a
                     class="{% if grand_total %}text-info font-weight-bold{% else %}black-text{% endif %}"
                     href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg black-text"></i>
                 {% if grand_total %}
@@ -117,12 +123,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- Materialize - Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Main JavaScript file -->
-    <script src="{% static 'js/script.js' %}"></script>
+
 {% endblock %}
 
 

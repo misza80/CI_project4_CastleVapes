@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
     <div class="container col s12 m10">
@@ -49,7 +50,7 @@
                                            data-size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="right-align subtotal">
-                                        <p>€{{ item.product.price }}</p>
+                                        <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
