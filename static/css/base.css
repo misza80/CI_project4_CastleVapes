@@ -36,7 +36,7 @@ main {
     margin-left: 1rem !important
 }
 
-.checkoutbutton{
+.blackbutton{
   background-color: black;
 }
 .subtotal{
@@ -45,4 +45,8 @@ main {
 .shoppingbuttons{
     width: 100%;
 
+}
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
