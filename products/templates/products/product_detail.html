@@ -43,13 +43,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <a href="{% url 'products' %}" class="btn blackbutton">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                         <span>Keep Shopping</span>
                                     </a>
-                                    <input type="submit" class="btn blackbutton"
+                                    <input type="submit" onclick="M.toast({html: 'Product added to bag',displayLength:5000})" class="btn blackbutton"
                                            value="Add to Bag">
                                 </div>
                             </div>
