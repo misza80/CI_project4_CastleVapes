@@ -10,7 +10,6 @@
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <div class="col s12">
                 {% if bag_items %}
@@ -26,9 +25,7 @@
                             </thead>
                             <tbody>
                             {% for item in bag_items %}
-
                                 <tr>
-
                                     <td>
                                         <p><strong>{{ item.product.name }}</strong></p>
                                         <p>SKU: {{ item.product.sku|upper }}</p>
@@ -37,8 +34,9 @@
                                         <p>€{{ item.product.price }}</p>
                                     </td>
                                     <td>
-                                        <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
-                                             {% csrf_token %}
+                                        <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}"
+                                              method="POST">
+                                            {% csrf_token %}
                                             <div class="input-group">
                                                 <input class="form-control qty_input" type="number" name="quantity"
                                                        value="{{ item.quantity }}"
@@ -49,7 +47,6 @@
                                         <a class="update-link text-info"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
                                            data-size="{{ item.size }}"><small>Remove</small></a>
-
                                     </td>
                                     <td class="right-align subtotal">
                                         <p>€{{ item.product.price }}</p>
@@ -57,7 +54,6 @@
                                 </tr>
                             {% endfor %}
                             <tr>
-
                                 <td>
                                 </td>
                                 <td>
@@ -107,4 +103,20 @@
             </div>
         </div>
     </div>
+{% endblock %}
+<!--Remove item from bag and csrf token-->
+{% block postloadjs %}
+    <script type="text/javascript">
+        $('.remove-item').click(function (e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken};
+
+            $.post(url, data)
+                .done(function () {
+                    location.reload();
+                });
+        })
+    </script>
 {% endblock %}

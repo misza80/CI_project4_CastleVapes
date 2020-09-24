@@ -36,16 +36,19 @@ main {
     margin-left: 1rem !important
 }
 
-.blackbutton{
-  background-color: black;
+.blackbutton {
+    background-color: black;
 }
-.subtotal{
+
+.subtotal {
     max-width: 100px;
 }
-.shoppingbuttons{
+
+.shoppingbuttons {
     width: 100%;
 
 }
+
 .update-link,
 .remove-item {
     cursor: pointer;
