@@ -21,4 +21,9 @@ $(document).ready(function () {
             window.location.replace(currentUrl);
         }
     })
+    // Shopping bag update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 });
