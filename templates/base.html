@@ -56,7 +56,7 @@
     <nav class="white nav-extended z-depth-0">
         <div class="nav-wrapper">
             <p class="right cart black-text"><a
-                    class="{% if grand_total %}text-info font-weight-bold{% else %}black-text{% endif %}"
+                    class="{% if grand_total %}black-text{% else %}black-text{% endif %}"
                     href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg black-text"></i>
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
