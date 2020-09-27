@@ -26,6 +26,7 @@ $(document).ready(function () {
         var form = $(this).prev('.update-form');
         form.submit();
     })
+    $("#id_category").addClass("browser-default");
 
 
 });
