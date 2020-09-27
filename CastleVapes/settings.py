@@ -24,7 +24,7 @@ SECRET_KEY = '8dw)@jz6he*w0(hwypk7@##x0d)$9h4d%9g&5_56o&ay#l12*w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -179,3 +179,4 @@ STANDARD_DELIVERY_PERCENTAGE = 5
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')

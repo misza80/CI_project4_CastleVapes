@@ -22,7 +22,7 @@
             <div class="col s2 m6"></div>
             <div class="col s5 m3">
                 <select id="sort-selector"
-                        class="browser-default {% if current_sorting != 'None_None' %}info{% else %}{% endif %}">
+                        class="browser-default {% if current_sorting != 'None_None' %}info{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                     </option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
