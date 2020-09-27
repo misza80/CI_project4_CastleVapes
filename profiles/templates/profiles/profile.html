@@ -2,16 +2,74 @@
 {% load static %}
 
 
-{% block content %}
-    <div class="container col s12">
+{% block page_header %}
+    <div class="container header-container">
         <div class="row">
-            <div class="col">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container s12">
+        <div class="row">
+            <div class="col s12">
                 <hr>
                 <h2>My Profile</h2>
                 <hr>
-                {{ profile }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6">
+                <p>Default Delivery Information</p>
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form }}
+                    <p class="right-align">
+                        <button class="btn blackbutton right-align">Update Information</button>
+                    </p>
+
+                </form>
+            </div>
+            <div class="col s12 l6">
+                <p>Order History</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Order Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}"
+                                   title="{{ order.order_number }}">
+                                    {{ order.order_number|truncatechars:10 }}
+                                </a>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td>
+                                <ul>
+                                    {% for item in order.lineitems.all %}
+                                        <li>
+                                            {{ item.product.name }} x{{ item.quantity }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>€{{ order.grand_total }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+{% endblock %}
 
+{% block postloadjs %}
 {% endblock %}
