@@ -54,6 +54,10 @@ nav .input-field{
 .blackbutton {
     background-color: black;
 }
+.whitebutton{
+    background: white;
+    border:1px black solid;
+}
 
 .subtotal {
     max-width: 100px;
