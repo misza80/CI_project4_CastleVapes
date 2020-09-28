@@ -73,7 +73,7 @@
                 <li>
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-field">
-                            <input id="search" type="search" name="q" required>
+                            <input id="search" type="search" name="q">
                             <label class="label-icon" for="search"><i
                                     class="black-text material-icons">search</i></label>
                             <i class="material-icons">close</i>
@@ -96,7 +96,7 @@
             {% if request.user.is_superuser %}
                 <li><a href="{% url 'add_product' %}" class="black-text">Product Management</a></li>
             {% endif %}
-            <li><a href="" class="black-text">My Profile</a></li>
+            <li><a href="{% url 'profile' %}" class="black-text">My Profile</a></li>
             <li><a href="{% url 'account_logout' %}" class="black-text">Logout</a></li>
         {% else %}
             <li><a href="{% url 'account_login' %}" class="black-text">Login</a></li>
@@ -104,11 +104,10 @@
         {% endif %}
         <li>
             <form method="GET" action="{% url 'products' %}">
-                <div class="input-field">
-                    <input id="search" type="text" name="q" placeholder="Search our site">
-                    <label class="label-icon" for="search"><i
-                            class="black-text material-icons">search</i></label>
-                    <i class="material-icons">close</i>
+                <div class="input-field mobile_navbar_search">
+                    <input id="search" type="text" name="q">
+                    <label class="label-icon" for="search">
+                        <i class="black-text material-icons">search</i></label>
                 </div>
             </form>
         </li>

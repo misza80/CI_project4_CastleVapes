@@ -20,6 +20,11 @@ nav .input-field{
     height: auto;
 }
 
+.mobile_navbar_search{
+    padding-left: 2rem;
+    max-width:90%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
