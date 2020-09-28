@@ -24,6 +24,18 @@ nav .input-field{
     padding-left: 2rem;
     max-width:90%;
 }
+.card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#singlecard .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* from Bulma */
 .icon {
@@ -34,11 +46,6 @@ nav .input-field{
     width: 1.5rem;
 }
 
-.card .card-image img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-}
 
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
     margin-left: 1rem !important
