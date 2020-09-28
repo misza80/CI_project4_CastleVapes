@@ -16,6 +16,9 @@ main {
     margin-right: 14px;
     margin-top: 0px;
 }
+nav .input-field{
+    height: auto;
+}
 
 /* from Bulma */
 .icon {
