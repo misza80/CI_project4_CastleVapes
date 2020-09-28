@@ -46,7 +46,7 @@
     <ul id="dropdown1" class="dropdown-content">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <li><a href="" class="black-text">Product Management</a></li>
+                <li><a href="{% url 'add_product' %}" class="black-text">Product Management</a></li>
             {% endif %}
             <li><a href="{% url 'profile' %}" class="black-text">My Profile</a></li>
             <li><a href="{% url 'account_logout' %}" class="black-text">Logout</a></li>
@@ -93,7 +93,7 @@
         <li><a class="black-text" href="">About Us</a></li>
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <li><a href="" class="black-text">Product Management</a></li>
+                <li><a href="{% url 'add_product' %}" class="black-text">Product Management</a></li>
             {% endif %}
             <li><a href="" class="black-text">My Profile</a></li>
             <li><a href="{% url 'account_logout' %}" class="black-text">Logout</a></li>
