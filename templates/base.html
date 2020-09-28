@@ -62,7 +62,7 @@
                     class="{% if grand_total %}black-text{% else %}black-text{% endif %}"
                     href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg black-text"></i>
                 {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                    €{{ grand_total|floatformat:2 }}
                 {% else %}
                     €0.00
                 {% endif %}
