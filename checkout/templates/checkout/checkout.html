@@ -22,12 +22,12 @@
                     {{ order_form.email }}
                     <legend>Delivery</legend>
                     {{ order_form.phone_number }}
-                    {{ order_form.country }}
                     {{ order_form.postcode }}
                     {{ order_form.town_or_city }}
                     {{ order_form.street_address1 }}
                     {{ order_form.street_address2 }}
                     {{ order_form.county }}
+                    {{ order_form.country }}
                     <div>
                         {% if user.is_authenticated %}
                             <p>
@@ -58,7 +58,7 @@
 
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     <div class="submit-button">
-                        <a href="{% url 'view_bag' %}" class="btn waves-effect blackbutton">
+                        <a href="{% url 'view_bag' %}" class="btn whitebutton black-text">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>

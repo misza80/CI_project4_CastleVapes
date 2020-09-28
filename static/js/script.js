@@ -26,7 +26,16 @@ $(document).ready(function () {
         var form = $(this).prev('.update-form');
         form.submit();
     })
+
     $("#id_category").addClass("browser-default");
 
+    $("#id_country").addClass("browser-default");
+
+
+    //main page slider
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+    });
 
 });
