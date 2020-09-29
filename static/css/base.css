@@ -4,6 +4,19 @@ body {
     flex-direction: column;
 }
 
+.homepageshopnowbutton {
+    margin-top: -70vh;
+    margin-left: 47vw;
+    z-index: 100000;
+    position: relative;
+}
+
+video {
+    width: 100% !important;
+    height: auto !important;
+    z-index: -100000 !important;
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -16,14 +29,16 @@ main {
     margin-right: 14px;
     margin-top: 0px;
 }
-nav .input-field{
+
+nav .input-field {
     height: auto;
 }
 
-.mobile_navbar_search{
+.mobile_navbar_search {
     padding-left: 2rem;
-    max-width:90%;
+    max-width: 90%;
 }
+
 .card .card-image img {
     width: 100%;
     height: 100%;
@@ -36,7 +51,7 @@ nav .input-field{
     object-fit: cover;
 }
 
-.checkoutimage{
+.checkoutimage {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -60,9 +75,10 @@ nav .input-field{
 .blackbutton {
     background-color: black;
 }
-.whitebutton{
+
+.whitebutton {
     background: white;
-    border:1px black solid;
+    border: 1px black solid;
 }
 
 .subtotal {
@@ -125,7 +141,7 @@ nav .input-field{
     left: 0;
     width: 100%;
     height: 100%;
-    background: RGBA(211,211,211,0.65);
+    background: RGBA(211, 211, 211, 0.65);
     z-index: 9999;
 }
 

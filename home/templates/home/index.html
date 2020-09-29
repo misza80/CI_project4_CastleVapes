@@ -2,5 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <h1>Home</h1>
+aDDED     <div class="col s12">
+        <video preload="" playsinline="" autoplay="" muted="">
+            <source src="{{ MEDIA_URL }}covervideo2.mp4" type="video/mp4">
+        </video>
+        <div class="homepageshopnowbutton">
+            <a href="{% url 'products' %}" class="btn blackbutton">
+                <span>Shop now</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
 {% endblock %}
