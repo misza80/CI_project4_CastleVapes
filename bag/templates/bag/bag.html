@@ -46,8 +46,8 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                                           data-size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="remove-item red-text float-right" id="remove_{{ item.item_id }}"
+                                        ><small>Remove</small></a>
                                     </td>
                                     <td class="right-align subtotal">
                                         <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -94,7 +94,7 @@
                     </div>
                 {% else %}
                     <p>Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'products' %}" class="btn blackbutton">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
