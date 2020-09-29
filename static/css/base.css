@@ -68,6 +68,7 @@ nav .input-field {
 }
 
 
+
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
     margin-left: 1rem !important
 }
@@ -75,7 +76,9 @@ nav .input-field {
 .blackbutton {
     background-color: black;
 }
-
+.redbutton {
+    background-color: red;
+}
 .whitebutton {
     background: white;
     border: 1px black solid;
