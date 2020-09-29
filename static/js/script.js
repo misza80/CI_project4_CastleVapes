@@ -32,10 +32,4 @@ $(document).ready(function () {
     $("#id_country").addClass("browser-default");
 
 
-    //main page slider
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        indicators: true
-    });
-
 });
