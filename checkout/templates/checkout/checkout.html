@@ -62,7 +62,7 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-                            <span class="font-weight-bold">Adjust Bag</span>
+                            <span>Adjust Bag</span>
                         </a>
                         <button id="submit-button" class="btn waves-effect blackbutton">
                             <span class="font-weight-bold">Complete Order</span>
@@ -70,7 +70,7 @@
 								<i class="fas fa-lock"></i>
 							</span>
                         </button>
-                        <p class="small text-danger my-0">
+                        <p class="red-text">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
@@ -110,7 +110,7 @@
                             <p>Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col s4 right-align">
-                            <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -124,7 +124,7 @@
                     <div class="col s5 right-align">
                         <p>€{{ total | floatformat:2 }}</p>
                         <p>€{{ delivery | floatformat:2 }}</p>
-                        <p><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        <p><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
