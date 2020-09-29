@@ -1,1 +1,1 @@
-web: gunicorn CastleVapes.wsgi.application
+web: gunicorn CastleVapes.wsgi:application
