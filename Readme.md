@@ -65,7 +65,8 @@ Chrome developer tools were also used to check for compatibility and responsiven
 Collapsible navbar works correctly on mobile devices. 
 Code was validated using W3C, JsHint and PEP8 online validation services.All links were tested manually and will open within same browser tab.I used a lot of console.log() to see if my code us running correctly.
 #### Errors
-No errors were found in the final deployment.
+
+Email notification functionality is not working,emails are not being sent out to activate accounts,confirm orders,etc.Was set up using gmail email account. Could not test with other vendors due to project submission deadline.
 
 ## Deployment
 
