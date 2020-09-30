@@ -33,9 +33,8 @@ My goal in the design was to create a simple,easy to navigate website with a whi
 
 
 ### Skeleton
-[Landing wireframe]() \
-[List of recipes wireframe]() \
-[Single recipe wireframe]() 
+[Wireframes](https://github.com/misza80/CI_project4_CastleVapes/blob/master/wireframes) 
+
 
 ### Surface
 The typography was found on google fonts and I chose the font Great Vibes for logo and Montserrat for page's body.
@@ -66,6 +65,7 @@ Chrome developer tools were also used to check for compatibility and responsiven
 Collapsible navbar works correctly on mobile devices. 
 Code was validated using W3C, JsHint and PEP8 online validation services.All links were tested manually and will open within same browser tab.I used a lot of console.log() to see if my code us running correctly.
 #### Errors
+No errors were found in the final deployment.
 
 ## Deployment
 
@@ -110,9 +110,14 @@ Restart all dynos on Heroku
 ### Content
 
 Images for vape mods were obtained from Google Images.
+
 ### Media
 
+Front page video was mad from static images obtained from Google Images.
+
 ### Acknowledgements
+
+Special thanks to Chris Zielinski for his continuous support on slack.
 
 Wireframes were made using www.moqups.com
  
