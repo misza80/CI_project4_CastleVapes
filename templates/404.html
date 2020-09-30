@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="container s12">
     <h1><strong>Oops!</strong></h1>
     <h2><i class="material-icons large">mood_bad</i></h2>
     <h3>The Requested Page Was Not Found...</h3>
     <h5>Please try another link or enter a valid URL</h5>
-    <a href="{% url 'products' %}" class="btn whitebutton black-text">
+    <p>Please check out our items on sale</p><a href="{% url 'products' %}" class="btn whitebutton black-text">
         <span class="icon">
             <i class="fas fa-chevron-left"></i>
         </span>
         <span>Keep Shopping</span>
     </a>
+</div>
 
 {% endblock %}
