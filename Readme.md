@@ -120,6 +120,8 @@ Front page video was mad from static images obtained from Google Images.
 
 Special thanks to Chris Zielinski for his continuous support on slack.
 
+I received inspiration, and based the code for this project from Code Institute's 'Full Stack Frameworks With Django' course material.
+
 Wireframes were made using www.moqups.com
  
 
