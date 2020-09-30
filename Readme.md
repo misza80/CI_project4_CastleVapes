@@ -33,7 +33,7 @@ My goal in the design was to create a simple,easy to navigate website with a whi
 
 
 ### Skeleton
-[Wireframes](https://github.com/misza80/CI_project4_CastleVapes/blob/master/wireframes) 
+[Wireframes](https://github.com/misza80/CI_project4_CastleVapes/tree/master/Wireframes) 
 
 
 ### Surface
