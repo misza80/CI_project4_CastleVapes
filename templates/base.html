@@ -139,6 +139,33 @@
 {% block content %}
 {% endblock %}
 
+<footer class="page-footer brown">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Castle Vapes</h5>
+                <p class="grey-text text-lighten-4">Bespoke vape mods.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Vape Mods</h5>
+                <ul id='dropdown2' class='dropdown-content'>
+                    <li><a href="{% url 'products' %}?category=woodresin">Wood and resin mods</a></li>
+                    <li><a href="{% url 'products' %}?category=metal">Metal mods</a></li>
+                    <li><a href="{% url 'products' %}?category=plastic">Plastic mods</a></li>
+                    <li><a href="{% url 'products' %}?category=deals">Special Offers</a></li>
+                    <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
+                    <li><a href="{% url 'products' %}">Show All</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 MA design
+        </div>
+    </div>
+</footer>
+
 {% block postloadjs %}
     <script>
         setTimeout(function () {
